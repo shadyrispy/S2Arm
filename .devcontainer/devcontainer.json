@@ -6,7 +6,10 @@
   },
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/sshd:1": {}
+    "ghcr.io/devcontainers/features/sshd:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
   },
   "hostRequirements": {
     "cpus": 4,
@@ -14,7 +17,9 @@
     "storage": "32gb"
   },
   "remoteEnv": {
-    "S2A_PY": "${containerWorkspaceFolder}/build/venv/bin/python3"
+    "S2A_PY": "${containerWorkspaceFolder}/build/venv/bin/python3",
+    "S2A_PYTHON": "${containerWorkspaceFolder}/build/venv/bin/python3",
+    "S2A_FONTS": "${containerWorkspaceFolder}/build/openfonts"
   },
   "postCreateCommand": "bash .devcontainer/post-create.sh",
   "remoteUser": "vscode"
